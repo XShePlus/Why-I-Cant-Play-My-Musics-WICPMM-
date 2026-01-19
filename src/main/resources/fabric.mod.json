@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "wicpmm",
+  "version": "${version}",
+  "name": "Why I Cant Play My Musics?",
+  "description": "a mod which is aim to play yourself's musics in the minecraft",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/wicpmm/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.xshe.wicpmm.client.WicpmmDataGenerator"
+    ],
+    "client": [
+      "org.xshe.wicpmm.client.WicpmmClient"
+    ],
+    "main": [
+      "org.xshe.wicpmm.Wicpmm"
+    ]
+  },
+  "mixins": [
+    "wicpmm.mixins.json",
+    {
+      "config": "wicpmm.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
